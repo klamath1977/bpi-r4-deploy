@@ -1,0 +1,10 @@
+#!/bin/sh
+[ -e /etc/uci-defaults/99-disable-ntpd ] && exit 0
+
+# Disabled the default system NTP daemon (`timeserver`) to prevent conflicts with `chrony-nts`.
+uci -q batch <<EOF
+set system.@timeserver[0].enabled='0'
+commit system
+EOF
+
+exit 0
