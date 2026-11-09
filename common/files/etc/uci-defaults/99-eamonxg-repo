@@ -1,6 +1,0 @@
-#!/bin/sh
-
-# Add Aurora Theme Repo
-echo "https://openwrt.eamonxg.fun/snapshots/apk" >> /etc/apk/repositories.d/customfeeds.list
-
-exit 0
