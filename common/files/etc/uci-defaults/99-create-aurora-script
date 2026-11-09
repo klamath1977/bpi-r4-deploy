@@ -1,0 +1,15 @@
+#!/bin/sh
+[ -e /etc/uci-defaults/99-create-aurora-script ] && exit 0
+
+# Crea lo script helper in /root/install-aurora.sh
+cat << 'EOF' > /root/install-aurora.sh
+#!/bin/sh
+# Script helper per installare il tema Aurora on-demand
+echo "==> Connessione al feed di Aurora in corso..."
+wget -qO- https://openwrt.eamonxg.fun/install.sh | sh
+EOF
+
+# Rende lo script eseguibile
+chmod +x /root/install-aurora.sh
+
+exit 0
