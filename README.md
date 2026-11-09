@@ -19,9 +19,11 @@ Compared to the upstream base, this fork introduces the following specific chang
   - `chrony-nts` + `luci-app-chrony` + `collectd-mod-chrony`
 - **Native WireGuard:** Integrated native WireGuard kernel module, CLI tools, and LuCI support (`kmod-wireguard`, `wireguard-tools`, `luci-proto-wireguard`).
 
+- **Aurora Theme:** Integration of Aurora Theme Repo (https://github.com/eamonxg/luci-theme-aurora) via external feed installer (/root/install-aurora.sh).
+- **WireGuard Installer:** Integration of the automated setup script from [Coralesoft/openwrt-wireguard-installer](https://github.com/Coralesoft/openwrt-wireguard-installer). (/root/install-wireguard.sh)
+
 ---
 
 ## Roadmap / Upcoming Features
+...... NoPe ......
 
-- **Aurora Theme:** Integration of `luci-theme-aurora` via external feed in the next release cycle.
-- **WireGuard Installer:** Integration of the automated setup script from [Coralesoft/openwrt-wireguard-installer](https://github.com/Coralesoft/openwrt-wireguard-installer).
