@@ -1,0 +1,18 @@
+#!/bin/sh
+[ -e /etc/uci-defaults/99-create-wg-installer-script ] && exit 0
+
+# Crea lo script in /root/install-wireguard.sh con i comandi desiderati
+cat << 'EOF' > /root/install-wireguard.sh
+#!/bin/sh
+cd /root
+wget https://raw.githubusercontent.com/Coralesoft/Openwrt-Wireguard-Installer/main/wg-openwrt-installer.sh
+wget https://raw.githubusercontent.com/Coralesoft/Openwrt-Wireguard-Installer/main/wg-peer-manage.sh
+wget https://raw.githubusercontent.com/Coralesoft/Openwrt-Wireguard-Installer/main/wg-key-rotate.sh
+wget https://raw.githubusercontent.com/Coralesoft/Openwrt-Wireguard-Installer/main/wg-uninstall.sh
+chmod +x wg-*.sh
+EOF
+
+# Rende eseguibile lo script appena creato
+chmod +x /root/install-wireguard.sh
+
+exit 0
